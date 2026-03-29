@@ -1,4 +1,4 @@
-import db from "config/db.js";
+import db from "../config/db.js";
 
 class ShoppingList {
     static async generateFromMealPlan(userId, startDate, endDate) {

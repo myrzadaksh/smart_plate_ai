@@ -1,5 +1,4 @@
 import 'dotenv/config';
-
 import express from 'express';
 import cors from 'cors';
 import authRoutes from './routes/auth.js';
@@ -8,6 +7,7 @@ import pantryRoutes from './routes/pantry.js';
 import recipeRoutes from './routes/recipes.js';
 import mealPlanRoutes from './routes/mealPlans.js';
 import shoppingListRoutes from './routes/shoppingList.js';
+
 
 const app = express();
 app.use(cors());

@@ -1,5 +1,5 @@
 import bcrypt from 'bcryptjs';
-import db from 'config/db.js';
+import db from '../config/db.js';
 
 class User {
   static async create({ email, password, name }) {

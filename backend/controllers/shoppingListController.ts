@@ -1,4 +1,4 @@
-import ShoppingList from "models/ShoppingList.js";
+import ShoppingList from "../models/ShoppingList.js";
 
 export const generateFromMealPlan = async (req, res, next) => {
     try {

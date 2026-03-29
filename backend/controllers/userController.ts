@@ -1,5 +1,5 @@
-import User from "models/User.js";
-import UserPreference from "models/UserPreference.js";
+import User from "../models/User.js";
+import UserPreference from "../models/UserPreference.js";
 
 export const getProfile = async (req, res, next) => {
   try {
@@ -59,7 +59,7 @@ if (!currentPassword || !newPassword) {
   });
 }
 
-const user = await User.findByEmail(req.user.email);
+const user = (await User.findByEmail(req.user.email)) as unknown as any;
 const isValid = await User.verifyPassword(currentPassword, user.password_hash);
 
 if (!isValid) {

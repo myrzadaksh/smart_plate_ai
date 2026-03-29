@@ -1,5 +1,5 @@
-import Recipe from "models/Recipe.js";
-import PantryItem from "models/PantryItem.js";
+import Recipe from "../models/Recipe.js";
+import PantryItem from "../models/PantryItem.js";
 import { generateRecipe as generateRecipeAI, generatePantrySuggestions as generatePantrySuggestionsAI } from '../utils/gemini.js';
 
 export const generateRecipe = async (req, res, next) => {
@@ -17,7 +17,7 @@ export const generateRecipe = async (req, res, next) => {
 
         if (usePantryIngredients) {
             const pantryItems = await PantryItem.findByUserId(req.user.id);
-            const pantryIngredientNames = pantryItems.map(item => item.name);
+            const pantryIngredientNames = (pantryItems as any[]).map(item => item.name);
             finalIngredients = [...new Set([...finalIngredients, ...pantryIngredientNames])];
         }
 
@@ -51,7 +51,7 @@ export const getPantrySuggestions = async (req, res, next) => {
         const pantryItems = await PantryItem.findByUserId(req.user.id);
         const expiringItems = await PantryItem.getExpiringSoon(req.user.id, 7);
 
-        const expiringNames = expiringItems.map(item => item.name);
+        const expiringNames = (expiringItems as any[]).map(item => item.name);
         const suggestions = await generatePantrySuggestionsAI(pantryItems, expiringNames);
 
         res.json({

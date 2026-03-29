@@ -3,17 +3,17 @@
     "target": "ESNext",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
-    "typeRoots": [
-      "./node_modules/@types",
-      "./@types"
-    ]
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": false,           
+    "noImplicitAny": false,    
+    "skipLibCheck": true,      
+    "baseUrl": ".",
+    "paths": {
+      "*": ["src/*", "node_modules/*"]
+    }
   },
-  "include": [
-    "**/*.ts",
-    "@types/**/*.d.ts"
-  ]
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }

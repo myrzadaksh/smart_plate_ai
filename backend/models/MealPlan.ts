@@ -1,4 +1,4 @@
-import db from "config/db.js";
+import db from "../config/db.js";
 
 class MealPlan {
     static async create(userId, mealData) {

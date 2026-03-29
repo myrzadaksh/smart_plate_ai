@@ -1,4 +1,4 @@
-import PantryItem from "models/PantryItem.js";
+import PantryItem from "../models/PantryItem.js";
 
 export const getPantryItems = async (req, res, next) => {
     try {

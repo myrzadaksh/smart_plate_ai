@@ -3,7 +3,6 @@ import { useAuth } from '../context/AuthContext';
 import { ChefHat, Home, UtensilsCrossed, Calendar, ShoppingCart, Settings, LogOut, ChevronDown } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import type { ReactNode } from 'react';
-
 const Navbar = () => {
     const { user, logout } = useAuth();
     const navigate = useNavigate();

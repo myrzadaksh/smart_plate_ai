@@ -1,4 +1,4 @@
-import db from "config/db.js";
+import db from "../config/db.js";
 
 class UserPreference {
   static async upsert(userId, preferences) {

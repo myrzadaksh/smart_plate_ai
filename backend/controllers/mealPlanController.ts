@@ -1,4 +1,4 @@
-import MealPlan from "models/MealPlan.js";
+import MealPlan from "../models/MealPlan.js";
 
 export const addToMealPlan = async (req, res, next) => {
     try {
