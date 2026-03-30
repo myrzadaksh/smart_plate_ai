@@ -1,5 +1,7 @@
 # 🥗 SmartPlate AI - Fullstack Recipe Generator
 
+https://frontend-f4tx.onrender.com
+
 A smart recipe generator powered by Artificial Intelligence (Google Gemini API) that helps users plan meals based on the ingredients available in their pantry.
 
 ## 🛠 Tech Stack
